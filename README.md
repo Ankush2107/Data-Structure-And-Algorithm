@@ -110,4 +110,4 @@ Big O notation, specifically focusing on the worst-case scenario, is crucial for
     }
 
 ```
-![Quadratic graph](./quadratic.png)
+![Quadratic graph](./q.png)
