@@ -51,3 +51,15 @@ Big O notation, specifically focusing on the worst-case scenario, is crucial for
 
 4. Resource Management: In addition to time complexity, Big O notation can also represent space complexity. Understanding how an algorithm consumes resources, such as memory or processing power, is essential for efficient resource management in applications and systems.
 
+### Common Complexity
+
+1. O(1): Constant
+`O(1) represents constant time complexity in Big O notation. This means that regardless of the size of the input, the algorithm will always take the same amount of time to execute. In other words, the runtime of the algorithm does not depend on the size of the input.`
+
+```
+    function totalSum(arr) {
+        console.log("Hello world")
+    }
+    let arr = [1, 2, 3, 4, 5, 6]
+    totalSum(arr)
+```
