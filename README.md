@@ -63,3 +63,26 @@ Big O notation, specifically focusing on the worst-case scenario, is crucial for
     let arr = [1, 2, 3, 4, 5, 6]
     totalSum(arr)
 ```
+![constant graph](./constant.png)
+
+2. O(n): Linear
+`O(n) represents linear time complexity in Big O notation. This means that the runtime of the algorithm grows linearly with the size of the input. As the size of the input increases, the time taken by the algorithm to execute also increases proportionally.`
+
+```
+// Function to find the maximum element in an array (linear search)
+function findMax(arr) {
+    let max = arr[0]; // Initialize max to the first element of the array
+    
+    // Iterate through each element of the array starting from the second element
+    for (let i = 1; i < arr.length; i++) {
+        // If the current element is greater than the current maximum, update max
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    
+    return max; // Return the maximum element
+}
+
+```
+![linear graph](./linear.png)
