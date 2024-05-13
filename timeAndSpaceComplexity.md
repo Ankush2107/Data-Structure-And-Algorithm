@@ -63,3 +63,4 @@ Big O notation, specifically focusing on the worst-case scenario, is crucial for
     let arr = [1, 2, 3, 4, 5, 6]
     totalSum(arr)
 ```
+![constant graph](./constant.png)
