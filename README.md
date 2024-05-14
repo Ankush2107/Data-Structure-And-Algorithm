@@ -1,4 +1,4 @@
-# Data Structure And Algorithm
+# Data Structure And Algorithm 🚀
 
 ### Time and Space Complexity
 
@@ -6,7 +6,7 @@ Time Complexity != time taken by a particular program to run
 
 Every platform and device takes a different amount of time to execute and complete different tasks. So, time complexity is not about the time taken by a program to run.
 
-### Then, What is Time Complexity ? 
+### Then, What is Time Complexity ? ⏳
 
 - Time complexity is a concept in computer science that tells us how much time or resources an algorithm needs to solve a problem, based on the size of the input. It helps us understand how the runtime of an algorithm changes as we give it more data to work with, which means it shows how the number of operations performed by the algorithm increases as the input size grows.
 
