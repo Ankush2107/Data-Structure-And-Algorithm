@@ -111,3 +111,81 @@ Big O notation, specifically focusing on the worst-case scenario, is crucial for
 
 ```
 ![Quadratic graph](./q.png)
+
+
+4. O(logn): Logarithmic
+`O(log n), pronounced as "O log n," represents logarithmic time complexity in Big O notation. This means that the runtime of the algorithm grows logarithmically with the size of the input. As the size of the input increases, the time taken by the algorithm to execute increases at a much slower rate compared to linear or quadratic growth.`
+
+```
+    // Function to perform binary search on a sorted array
+    function binarySearch(arr, target) {
+        let left = 0;
+        let right = arr.length - 1;
+        
+        while (left <= right) {
+            let mid = Math.floor((left + right) / 2);
+            
+            // If the target is found at the middle index, return its index
+            if (arr[mid] === target) {
+                return mid;
+            }
+            
+            // If the target is greater than the middle element, search the right half
+            if (arr[mid] < target) {
+                left = mid + 1;
+            }
+            // If the target is smaller than the middle element, search the left half
+            else {
+                right = mid - 1;
+            }
+        }
+        
+        // If the target is not found, return -1
+        return -1;
+    }
+```
+![Logarithmic graph](./logarithmic.png)
+
+
+5. O(nlogn): `O(n log n) represents a time complexity that combines both linear and logarithmic growth rates. This complexity is common in more efficient sorting algorithms, such as merge sort and quicksort, as well as in some other divide-and-conquer algorithms. The reason for the O(n log n) complexity often stems from the algorithm performing a logarithmic number of divisions or merges and performing a linear amount of work at each level of recursion or iteration.` 
+
+```
+    // Function to merge two sorted arrays
+    function merge(left, right) {
+        let result = [];
+        let leftIndex = 0;
+        let rightIndex = 0;
+
+        // Compare elements from both arrays and merge them in sorted order
+        while (leftIndex < left.length && rightIndex < right.length) {
+            if (left[leftIndex] < right[rightIndex]) {
+                result.push(left[leftIndex]);
+                leftIndex++;
+            } else {
+                result.push(right[rightIndex]);
+                rightIndex++;
+            }
+        }
+
+        // Concatenate remaining elements
+        return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+    }
+
+    // Function to perform merge sort
+    function mergeSort(arr) {
+        if (arr.length <= 1) {
+            return arr;
+        }
+
+        const middle = Math.floor(arr.length / 2);
+        const left = mergeSort(arr.slice(0, middle));
+        const right = mergeSort(arr.slice(middle));
+
+        return merge(left, right);
+    }
+
+    // Example usage
+    const numbers = [3, 7, 2, 9, 5];
+    console.log("Sorted array:", mergeSort(numbers)); // Output: Sorted array: [2, 3, 5, 7, 9]
+
+```
